@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="new_robot">
+
+
+  <xacro:include filename="$(find mec)/model/base.xacro"/>
+  <xacro:include filename="$(find mec)/model/wheel_joints.xacro"/>  
+  <xacro:include filename="$(find mec)/model/gazebo.xacro"/>  
+  <xacro:include filename="$(find mec)/model/lidar.xacro"/>
+  <xacro:include filename="$(find mec)/model/imu.xacro"/>  
+  <xacro:include filename="$(find mec)/model/camera.xacro"/>   
+  <xacro:include filename="$(find mec)/model/driver.xacro"/>  
+  
+</robot>

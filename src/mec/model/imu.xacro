@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link
+    name="imu">
+    <inertial>
+      <origin
+        xyz="-3.9295E-05 -0.0014664 -0.00041921"
+        rpy="0 0 0" />
+      <mass
+        value="0.00077106" />
+      <inertia
+        ixx="1.3877E-08"
+        ixy="7.6765E-10"
+        ixz="-7.5369E-15"
+        iyy="2.6926E-08"
+        iyz="-2.4674E-15"
+        izz="3.9518E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/imu.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/imu.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.026514 -0.050753 0.00761"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  <gazebo reference="imu">
+    <sensor name="imu_sensor" type="imu">
+
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <pose>0 0 0 0 0 0</pose>
+
+      <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+        <ros>
+          <namespace>/imu</namespace>
+          <remapping>~/out:=data</remapping>
+        </ros>
+
+        <initial_orientation_as_reference>false</initial_orientation_as_reference>
+      </plugin>
+
+      <imu>
+        <angular_velocity>
+          <x>true</x>
+          <y>true</y>
+          <z>true</z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x>true</x>
+          <y>true</y>
+          <z>true</z>
+        </linear_acceleration>
+      </imu>
+
+    </sensor>
+  </gazebo>
+
+
+  <!-- <gazebo reference="imu">
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>50</update_rate>
+      <visualize>true</visualize>
+
+      <imu>
+        <angular_velocity>
+          <x>true</x>
+          <y>true</y>
+          <z>true</z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x>true</x>
+          <y>true</y>
+          <z>true</z>
+        </linear_acceleration>
+      </imu>
+
+      <plugin name="imu_controller" filename="libgazebo_ros_imu_sensor.so">
+        <ros>
+          <namespace>/imu</namespace>
+        </ros>
+        <frame_name>imu</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo> -->
+
+
+</robot>

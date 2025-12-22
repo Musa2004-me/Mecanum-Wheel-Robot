@@ -1,0 +1,652 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ================= Gazebo Visual Materials ================= -->
+  <gazebo reference="base_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="rear_right_wheel">
+    <material>Gazebo/Yellow</material>
+    <mu1>1.0</mu1><mu2>1.0</mu2>
+    <!-- <slip1>0.0</slip1>
+    <slip2>0.0</slip2> -->
+  </gazebo>
+
+  <gazebo reference="rear_left_wheel">
+    <material>Gazebo/Yellow</material>
+    <mu1>1.0</mu1><mu2>1.0</mu2>
+    <!-- <slip1>0.0</slip1>
+    <slip2>0.0</slip2>     -->
+  </gazebo>
+
+  <gazebo reference="front_right_wheel">
+    <material>Gazebo/Yellow</material>
+    <mu1>1.0</mu1><mu2>1.0</mu2>
+    <!-- <slip1>0.0</slip1>
+    <slip2>0.0</slip2>     -->
+  </gazebo>
+
+  <gazebo reference="front_left_wheel">
+    <material>Gazebo/Yellow</material>
+    <mu1>1.0</mu1><mu2>1.0</mu2>
+    <!-- <slip1>0.0</slip1>
+    <slip2>0.0</slip2>     -->
+  </gazebo>
+    
+  <gazebo reference="roller_1_1">
+    <material>Gazebo/Green</material>
+    
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_2_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_3_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_4_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_5_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_6_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_7_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_8_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_9_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_10_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+
+  </gazebo>
+
+  <gazebo reference="roller_11_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_12_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_13_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_14_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_15_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_16_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_17_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_18_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_19_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_20_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_21_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_22_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_23_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_24_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_25_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_26_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_27_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 -1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_28_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_29_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_30_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_31_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_32_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_33_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_34_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_35_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+  <gazebo reference="roller_36_1">
+    <material>Gazebo/Green</material>
+    <!-- Friction -->
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+
+    <!-- Contact parameters -->
+    <kp>100000</kp>
+    <kd>100000</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>40</maxVel>
+
+    <!-- Friction direction -->
+    <fdir1>1 1 0</fdir1>
+
+  </gazebo>
+
+
+</robot>

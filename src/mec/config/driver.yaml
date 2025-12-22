@@ -1,0 +1,62 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 50  # Hz
+
+    # Broadcaster for joint states
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # Wheel velocity controllers
+    front_left_wheel_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    front_right_wheel_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    rear_left_wheel_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    rear_right_wheel_controller:
+      type: forward_command_controller/ForwardCommandController
+
+# ================= Controllers Parameters =================
+
+front_left_wheel_controller:
+  ros__parameters:
+    joints:
+      - front_left_wheel_joint
+    interface_name: velocity
+    pid:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+
+front_right_wheel_controller:
+  ros__parameters:
+    joints:
+      - front_right_wheel_joint
+    interface_name: velocity
+    pid:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+
+rear_left_wheel_controller:
+  ros__parameters:
+    joints:
+      - rear_left_wheel_joint
+    interface_name: velocity
+    pid:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+
+rear_right_wheel_controller:
+  ros__parameters:
+    joints:
+      - rear_right_wheel_joint
+    interface_name: velocity
+    pid:
+      p: 1.0
+      i: 0.0
+      d: 0.0

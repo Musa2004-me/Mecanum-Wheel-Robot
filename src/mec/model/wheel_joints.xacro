@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"> 
+
+
+  <!-- front_right_wheel with all roller joints  -->
+
+  <joint name="front_right_wheel_joint" type="continuous">
+    <origin xyz="0.1265 -0.145 -0.03885" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="front_right_wheel"/>
+    <axis xyz="0 1 0" />
+    <!-- <dynamics damping="0.1" friction="1.0"/>  -->
+  </joint>
+
+  <joint name="roller_1_1_joint" type="continuous">
+    <origin xyz="-0.042399 0.040381 -0.010107" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_1_1"/>
+    <axis xyz="0.125122 -0.693402 0.709604"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_2_1_joint" type="continuous">
+    <origin xyz="-0.038976 0.040381 0.019512" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_2_1"/>
+    <axis xyz="0.551974 -0.693402 0.463161"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_3_1_joint" type="continuous">
+    <origin xyz="0.036385 0.040381 0.023998" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_3_1"/>
+    <axis xyz="0.125122 -0.693402 -0.709604"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_4_1_joint" type="continuous">
+    <origin xyz="-0.025983 0.040381 -0.034996" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_4_1"/>
+    <axis xyz="-0.360276 -0.693402 0.624016"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_5_1_joint" type="continuous">
+    <origin xyz="0.012447 0.040381 0.041772" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_5_1"/>
+    <axis xyz="0.551974 -0.693402 -0.463161"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_6_1_joint" type="continuous">
+    <origin xyz="0.043299 0.040381 -0.005004" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_6_1"/>
+    <axis xyz="-0.360276 -0.693402 -0.624016"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_7_1_joint" type="continuous">
+    <origin xyz="-0.017316 0.040381 0.04" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_7_1"/>
+    <axis xyz="0.720551 -0.693402 -0.0"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_8_1_joint" type="continuous">
+    <origin xyz="0.029952 0.040381 -0.031665" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_8_1"/>
+    <axis xyz="-0.677097 -0.693402 -0.246443"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_9_1_joint" type="continuous">
+    <origin xyz="0.002591 0.040381 -0.04351" rpy="0 0 0"/>
+    <parent link="front_right_wheel"/>
+    <child link="roller_9_1"/>
+    <axis xyz="-0.677097 -0.693402 0.246443"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+
+  <!-- front_left_wheel with all roller joints  -->
+
+  <joint name="front_left_wheel_joint" type="continuous">
+    <origin xyz="0.1265 0.145 -0.03885" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="front_left_wheel"/>
+    <axis xyz="0 1 0" />
+    <!-- <dynamics damping="0.1" friction="1.0"/>      -->
+  </joint>
+
+  <joint name="roller_10_1_joint" type="continuous">
+    <origin xyz="-0.036391 -0.007086 0.023967" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_10_1"/>
+    <axis xyz="-0.125122 -0.693402 -0.709604"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_11_1_joint" type="continuous">
+    <origin xyz="-0.012472 -0.007086 0.041751" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_11_1"/>
+    <axis xyz="-0.551974 -0.693402 -0.463161"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_12_1_joint" type="continuous">
+    <origin xyz="0.025999 -0.007086 -0.034968" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_12_1"/>
+    <axis xyz="0.360276 -0.693402 0.624016"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_13_1_joint" type="continuous">
+    <origin xyz="0.042394 -0.007086 -0.010075" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_13_1"/>
+    <axis xyz="-0.125122 -0.693402 0.709604"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_14_1_joint" type="continuous">
+    <origin xyz="0.017316 -0.007119 0.04" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_14_1"/>
+    <axis xyz="0.720551 0.693402 -0.0"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_15_1_joint" type="continuous">
+    <origin xyz="-0.00256 -0.007086 -0.043499" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_15_1"/>
+    <axis xyz="0.677097 -0.693402 0.246443"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_16_1_joint" type="continuous">
+    <origin xyz="0.038976 -0.007119 0.019512" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_16_1"/>
+    <axis xyz="0.551974 0.693402 -0.463161"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_17_1_joint" type="continuous">
+    <origin xyz="-0.029922 -0.007086 -0.031676" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_17_1"/>
+    <axis xyz="0.677097 -0.693402 -0.246443"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_18_1_joint" type="continuous">
+    <origin xyz="-0.043283 -0.007086 -0.005032" rpy="0 0 0"/>
+    <parent link="front_left_wheel"/>
+    <child link="roller_18_1"/>
+    <axis xyz="0.360276 -0.693402 -0.624016"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+
+  <!-- rear_left_wheel with all roller joints  -->
+
+  <joint name="rear_left_wheel_joint" type="continuous">
+    <origin xyz="-0.1265 0.145 -0.03885" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="rear_left_wheel"/>
+    <axis xyz="0 1 0" />
+    <!-- <dynamics damping="0.1" friction="1.0"/>      -->
+  </joint>
+
+  <joint name="roller_19_1_joint" type="continuous">
+    <origin xyz="-0.042399 -0.007119 -0.010107" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_19_1"/>
+    <axis xyz="0.125122 -0.693402 0.709604"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_20_1_joint" type="continuous">
+    <origin xyz="-0.025983 -0.007119 -0.034996" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_20_1"/>
+    <axis xyz="-0.360276 -0.693402 0.624016"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_21_1_joint" type="continuous">
+    <origin xyz="0.043299 -0.007119 -0.005004" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_21_1"/>
+    <axis xyz="-0.360276 -0.693402 -0.624016"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_22_1_joint" type="continuous">
+    <origin xyz="0.012447 -0.007119 0.041772" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_22_1"/>
+    <axis xyz="0.551974 -0.693402 -0.463161"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+  
+  <joint name="roller_23_1_joint" type="continuous">
+    <origin xyz="-0.017316 -0.007119 0.04" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_23_1"/>
+    <axis xyz="0.720551 -0.693402 -0.0"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_24_1_joint" type="continuous">
+    <origin xyz="-0.038976 -0.007119 0.019512" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_24_1"/>
+    <axis xyz="0.551974 -0.693402 0.463161"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_25_1_joint" type="continuous">
+    <origin xyz="0.036385 -0.007119 0.023998" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_25_1"/>
+    <axis xyz="0.125122 -0.693402 -0.709604"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_26_1_joint" type="continuous">
+    <origin xyz="0.029952 -0.007119 -0.031665" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_26_1"/>
+    <axis xyz="-0.677097 -0.693402 -0.246443"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_27_1_joint" type="continuous">
+    <origin xyz="0.002591 -0.007119 -0.04351" rpy="0 0 0"/>
+    <parent link="rear_left_wheel"/>
+    <child link="roller_27_1"/>
+    <axis xyz="-0.677097 -0.693402 0.246443"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+
+  <!-- rear_right_wheel with all roller joints  -->
+
+  <joint name="rear_right_wheel_joint" type="continuous">
+    <origin xyz="-0.1265 -0.145 -0.03885" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="rear_right_wheel"/>
+    <axis xyz="0 1 0" />
+    <!-- <dynamics damping="0.1" friction="1.0"/>       -->
+  </joint> 
+
+  <joint name="roller_28_1_joint" type="continuous">
+    <origin xyz="-0.012447 0.040381 0.041772" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_28_1"/>
+    <axis xyz="0.551974 0.693402 0.463161"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_29_1_joint" type="continuous">
+    <origin xyz="-0.002591 0.040381 -0.04351" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_29_1"/>
+    <axis xyz="-0.677097 0.693402 -0.246443"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_30_1_joint" type="continuous">
+    <origin xyz="0.038976 0.040381 0.019512" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_30_1"/>
+    <axis xyz="0.551974 0.693402 -0.463161"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_31_1_joint" type="continuous">
+    <origin xyz="0.025983 0.040381 -0.034996" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_31_1"/>
+    <axis xyz="-0.360276 0.693402 -0.624016"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_32_1_joint" type="continuous">
+    <origin xyz="0.042399 0.040381 -0.010107" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_32_1"/>
+    <axis xyz="0.125122 0.693402 -0.709604"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_33_1_joint" type="continuous">
+    <origin xyz="-0.036391 0.040414 0.023967" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_33_1"/>
+    <axis xyz="-0.125122 -0.693402 -0.709604"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_34_1_joint" type="continuous">
+    <origin xyz="0.017316 0.040381 0.04" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_34_1"/>
+    <axis xyz="0.720551 0.693402 -0.0"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_35_1_joint" type="continuous">
+    <origin xyz="-0.029952 0.040381 -0.031665" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_35_1"/>
+    <axis xyz="-0.677097 0.693402 0.246443"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+  <joint name="roller_36_1_joint" type="continuous">
+    <origin xyz="-0.043299 0.040381 -0.005004" rpy="0 0 0"/>
+    <parent link="rear_right_wheel"/>
+    <child link="roller_36_1"/>
+    <axis xyz="-0.360276 0.693402 0.624016"/>
+    <!-- <limit effort="0.1" velocity="100.0"/>
+    <dynamics damping="0.1" friction="1.0"/> -->
+  </joint>
+
+
+  
+</robot>

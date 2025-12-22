@@ -1,0 +1,1397 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- <link name="base_link">
+    <inertial>
+      <origin xyz="6.760415092149816e-05 -2.9513096198865094e-17 2.0788276408363705e-05" rpy="0 0 0"/>
+      <mass value="19.3528550466136"/>
+      <inertia ixx="0.07315" iyy="0.151641" izz="0.219727" ixy=" 0.0" iyz="0.0" ixz="-2.7e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link> -->
+    
+  <!-- 
+    <link
+      name="rear_right_wheel">
+      <inertial>
+        <origin
+          xyz="-2.2835E-06 3.7979E-07 0.00071836"
+          rpy="0 0 0" />
+        <mass
+          value="1.0289" />
+        <inertia
+          ixx="0.00017755"
+          ixy="1.2488E-08"
+          ixz="-2.5268E-09"
+          iyy="0.00017761"
+          iyz="-1.3435E-08"
+          izz="0.00022365" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="file://$(find mec)/meshes/rear_right_wheel.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="1 1 0 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find mec)/meshes/rear_right_wheel.STL" />
+        </geometry>
+  
+      </collision>
+    </link>
+
+    <joint
+      name="rear_right_wheel_joint"
+      type="continuous">
+      <origin
+        xyz="-0.1265 -0.12365 -0.03885"
+        rpy="-1.5708 0 -3.1416" />
+      <parent
+        link="base_link" />
+      <child
+        link="rear_right_wheel" />
+      <axis
+        xyz="0 0 1" />
+    </joint> -->
+  <!--   
+    <link
+      name="front_right_wheel">
+      <inertial>
+        <origin
+          xyz="1.4264E-06 1.6554E-06 0.00077886"
+          rpy="0 0 0" />
+        <mass
+          value="1.0289" />
+        <inertia
+          ixx="0.00017758"
+          ixy="-3.4031E-08"
+          ixz="1.0423E-08"
+          iyy="0.00017757"
+          iyz="-8.8206E-09"
+          izz="0.00022365" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="file://$(find mec)/meshes/front_right_wheel.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="1 1 0 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find mec)/meshes/front_right_wheel.STL" />
+        </geometry>
+  
+      </collision>
+    </link>
+
+    <joint
+      name="front_right_wheel_joint"
+      type="continuous">
+      <origin
+        xyz="0.1265 -0.12365 -0.03885"
+        rpy="-1.5708 0 -3.1416" />
+      <parent
+        link="base_link" />
+      <child
+        link="front_right_wheel" />
+      <axis
+        xyz="0 0 1" />
+    </joint>
+    <link
+      name="front_left_wheel">
+      <inertial>
+        <origin
+          xyz="1.405E-06 -1.8181E-06 -0.00071849"
+          rpy="0 0 0" />
+        <mass
+          value="1.0289" />
+        <inertia
+          ixx="0.00017759"
+          ixy="3.2579E-08"
+          ixz="1.1318E-08"
+          iyy="0.00017757"
+          iyz="7.7617E-09"
+          izz="0.00022365" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="file://$(find mec)/meshes/front_left_wheel.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="1 1 0 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find mec)/meshes/front_left_wheel.STL" />
+        </geometry>
+  
+      </collision>
+    </link>
+
+    <joint
+      name="front_left_wheel_joint"
+      type="continuous">
+      <origin
+        xyz="0.1265 0.12365 -0.03885"
+        rpy="-1.5708 0 -3.1416" />
+      <parent
+        link="base_link" />
+      <child
+        link="front_left_wheel" />
+      <axis
+        xyz="0 0 1" />
+    </joint>
+    <link
+      name="rear_left_wheel">
+      <inertial>
+        <origin
+          xyz="-1.5059E-06 1.5491E-06 -0.00077889"
+          rpy="0 0 0" />
+        <mass
+          value="1.0289" />
+        <inertia
+          ixx="0.00017758"
+          ixy="3.4608E-08"
+          ixz="9.6664E-09"
+          iyy="0.00017758"
+          iyz="9.6256E-09"
+          izz="0.00022365" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="file://$(find mec)/meshes/rear_left_wheel.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="1 1 0 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find mec)/meshes/rear_left_wheel.STL" />
+        </geometry>
+      </collision>
+      
+    </link>
+    
+    <joint
+      name="rear_left_wheel_joint"
+      type="continuous">
+      <origin
+        xyz="-0.1265 0.12365 -0.03885"
+        rpy="-1.5708 0 -3.1416" />
+      <parent
+        link="base_link" />
+      <child
+        link="rear_left_wheel" />
+      <axis
+        xyz="0 0 1" />
+    </joint>
+  -->
+  <!-- <joint name="front_left_wheel_joint" type="continuous">
+    <origin xyz="0.125 0.15 0.0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="front_left_wheel"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint> -->
+  <!-- <joint name="front_right_wheel_joint" type="continuous">
+    <origin xyz="0.125 -0.15 0.0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="front_right_wheel"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint> -->
+  <!-- <joint name="rear_left_wheel_joint" type="continuous">
+    <origin xyz="-0.125 0.15 0.0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="rear_left_wheel"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint> -->
+  <!-- <joint name="rear_right_wheel_joint" type="continuous">
+    <origin xyz="-0.125 -0.15 0.0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="rear_right_wheel"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint> -->
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0004486 0.00083903 -0.022532"
+        rpy="0 0 0" />
+      <mass
+        value="3.558" />
+      <inertia
+        ixx="0.0092111"
+        ixy="-1.6996E-05"
+        ixz="4.6457E-06"
+        iyy="0.019941"
+        iyz="-1.5765E-07"
+        izz="0.027091" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find mec)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <link name="front_left_wheel">
+    <inertial>
+      <origin xyz="-2.1897287448918723e-05 -0.023738528231967565 3.1378817485983033e-06" rpy="0 0 0"/>
+      <mass value="0.30282113324994747"/>
+      <inertia ixx="0.00016" iyy="0.000181" izz="0.000158" ixy="-1e-06" iyz="0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.125 -0.15  0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/front_left_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.125 -0.15  0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/front_left_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_14_1">
+    <inertial>
+      <origin xyz="-0.01730009422242043 -0.01664777121912278 -2.6367796834847468e-15" rpy="0 0 0"/>
+      <mass value="0.014233736590697255"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz=" 0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.142316 -0.142881 -0.04" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_14_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.142316 -0.142881 -0.04" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_14_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_16_1">
+    <inertial>
+      <origin xyz="-0.01325231160541368 -0.01664777187914801 0.011119554128877593" rpy="0 0 0"/>
+      <mass value="0.01423373659069693"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz="1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.163976 -0.142881 -0.019512" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_16_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.163976 -0.142881 -0.019512" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_16_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_13_1">
+    <inertial>
+      <origin xyz="-0.0030044941161637972 -0.016647462795977563 0.01703683072301009" rpy="0 0 0"/>
+      <mass value="0.014233736590696914"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy=" 0.0" iyz="1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.167394 -0.142914 0.010075" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_13_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.167394 -0.142914 0.010075" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_13_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_12_1">
+    <inertial>
+      <origin xyz="0.008650090286065698 -0.016647462135951696 0.01498198481151108" rpy="0 0 0"/>
+      <mass value="0.01423373659069688"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.150999 -0.142914 0.034968" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_12_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.150999 -0.142914 0.034968" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_12_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>  
+  </link>
+
+  <link name="roller_15_1">
+    <inertial>
+      <origin xyz="0.016255980142600823 -0.016647462135952473 0.005916818201972901" rpy="0 0 0"/>
+      <mass value="0.014233736590697089"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz="0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.12244 -0.142914 0.043499" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_15_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.12244 -0.142914 0.043499" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_15_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_17_1">
+    <inertial>
+      <origin xyz="0.01625636867654784 -0.016647462135950142 -0.005917227864846754" rpy="0 0 0"/>
+      <mass value="0.014233736590697006"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz=" 0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.095078 -0.142914 0.031676" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_17_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.095078 -0.142914 0.031676" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_17_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_18_1">
+    <inertial>
+      <origin xyz="0.008650058329703877 -0.016647462793830475 -0.014981985403539554" rpy="0 0 0"/>
+      <mass value="0.01423373659069696"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="-1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.081717 -0.142914 0.005032" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_18_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081717 -0.142914 0.005032" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_18_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_10_1">
+    <inertial>
+      <origin xyz="-0.0030041143571402362 -0.016647462795977036 -0.017036976509655844" rpy="0 0 0"/>
+      <mass value="0.014233736590696993"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy=" 0.0" iyz="-1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.088609 -0.142914 -0.023967" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_10_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.088609 -0.142914 -0.023967" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_10_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_11_1">
+    <inertial>
+      <origin xyz="-0.013251875204888214 -0.016647462795978424 -0.011119602623583382" rpy="0 0 0"/>
+      <mass value="0.014233736590697477"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz="-1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.112528 -0.142914 -0.041751" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_11_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.112528 -0.142914 -0.041751" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_11_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="front_right_wheel">
+    <inertial>
+      <origin xyz="-2.1897287449737513e-05 0.02375019110552612 3.1378817487137666e-06" rpy="0 0 0"/>
+      <mass value="0.30282113324994836"/>
+      <inertia ixx="0.000161" iyy="0.000181" izz="0.000159" ixy=" 0.0" iyz="0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.125 0.15  0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/front_right_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.125 0.15  0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/front_right_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_7_1">
+    <inertial>
+      <origin xyz="0.017300094908289848 -0.01664777187914701 -1.2073675392798577e-15" rpy="0 0 0"/>
+      <mass value="0.014233736590697038"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz=" 0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.107684 0.109619 -0.04" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_7_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.107684 0.109619 -0.04" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_7_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_5_1">
+    <inertial>
+      <origin xyz="0.013252319854933331 -0.016647771219124002 -0.011119998238488766" rpy="0 0 0"/>
+      <mass value="0.01423373659069685"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz="-1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.137447 0.109619 -0.041772" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_5_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.137447 0.109619 -0.041772" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_5_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_3_1">
+    <inertial>
+      <origin xyz="0.00300454811119516 -0.01664777121912328 -0.017036408760246494" rpy="0 0 0"/>
+      <mass value="0.014233736590696551"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="-1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.161385 0.109619 -0.023998" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.161385 0.109619 -0.023998" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_6_1">
+    <inertial>
+      <origin xyz="-0.008650030959834937 -0.016647771219122087 -0.0149822251925512" rpy="0 0 0"/>
+      <mass value="0.014233736590697"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy=" 0.0" iyz="-1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.168299 0.109619 0.005004" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_6_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.168299 0.109619 0.005004" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_6_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_8_1">
+    <inertial>
+      <origin xyz="-0.01625624772515452 -0.016647771219123614 -0.005917264735106481" rpy="0 0 0"/>
+      <mass value="0.01423373659069701"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz=" 0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.154952 0.109619 0.031665" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_8_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.154952 0.109619 0.031665" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_8_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_9_1">
+    <inertial>
+      <origin xyz="-0.01625685983158369 -0.01664777188086597 0.005916855307413364" rpy="0 0 0"/>
+      <mass value="0.014233736590696988"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.127591 0.109619 0.04351" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_9_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.127591 0.109619 0.04351" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_9_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_4_1">
+    <inertial>
+      <origin xyz="-0.008650063605525643 -0.016647771879150397 0.014982225786529486" rpy="0 0 0"/>
+      <mass value="0.01423373659069714"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy=" 0.0" iyz="1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.099017 0.109619 0.034996" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_4_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.099017 0.109619 0.034996" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_4_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_1_1">
+    <inertial>
+      <origin xyz="0.003003927989318908 -0.01664777187914948 0.017037263649050942" rpy="0 0 0"/>
+      <mass value="0.014233736590697087"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.082601 0.109619 0.010107" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.082601 0.109619 0.010107" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_2_1">
+    <inertial>
+      <origin xyz="0.013252311605417427 -0.016647771879147594 0.011119554128875348" rpy="0 0 0"/>
+      <mass value="0.014233736590697151"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz="1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.086024 0.109619 -0.019512" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.086024 0.109619 -0.019512" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="rear_left_wheel">
+    <inertial>
+      <origin xyz="3.1733464467276207e-10 -0.023749808894473867 -7.519251293838056e-14" rpy="0 0 0"/>
+      <mass value="0.30282113324994536"/>
+      <inertia ixx="0.000161" iyy="0.000183" izz="0.000161" ixy=" 0.0" iyz=" 0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.125 -0.15  0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/rear_left_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.125 -0.15  0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/rear_left_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_23_1">
+    <inertial>
+      <origin xyz="0.017300094222420792 -0.016647771219122837 2.5049406993105094e-15" rpy="0 0 0"/>
+      <mass value="0.014233736590696983"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz=" 0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.142316 -0.142881 -0.04" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_23_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.142316 -0.142881 -0.04" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_23_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_22_1">
+    <inertial>
+      <origin xyz="0.013252320380338786 -0.016647771879150813 -0.011119998679360706" rpy="0 0 0"/>
+      <mass value="0.014233736590697042"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz="-1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.112553 -0.142881 -0.041772" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_22_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.112553 -0.142881 -0.041772" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_22_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_25_1">
+    <inertial>
+      <origin xyz="0.003004548230298998 -0.016647771879146955 -0.01703640943569361" rpy="0 0 0"/>
+      <mass value="0.014233736590697047"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="-1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.088615 -0.142881 -0.023998" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_25_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.088615 -0.142881 -0.023998" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_25_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_21_1">
+    <inertial>
+      <origin xyz="-0.008650030959835658 -0.016647771219122615 -0.014982225192550146" rpy="0 0 0"/>
+      <mass value="0.014233736590696936"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy=" 0.0" iyz="-1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.081701 -0.142881 0.005004" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_21_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.081701 -0.142881 0.005004" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_21_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_26_1">
+    <inertial>
+      <origin xyz="-0.016256248369660345 -0.016647771879147844 -0.005917264969692589" rpy="0 0 0"/>
+      <mass value="0.014233736590697033"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz=" 0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.095048 -0.142881 0.031665" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_26_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.095048 -0.142881 0.031665" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_26_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_27_1">
+    <inertial>
+      <origin xyz="-0.01625685918905319 -0.016647771222854157 0.005916855073576734" rpy="0 0 0"/>
+      <mass value="0.014233736590697002"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.122409 -0.142881 0.04351" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_27_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.122409 -0.142881 0.04351" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_27_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_20_1">
+    <inertial>
+      <origin xyz="-0.008650063605519703 -0.016647771879149093 0.01498222578652882" rpy="0 0 0"/>
+      <mass value="0.014233736590696985"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy=" 0.0" iyz="1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.150983 -0.142881 0.034996" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_20_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.150983 -0.142881 0.034996" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_20_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_19_1">
+    <inertial>
+      <origin xyz="0.0030039278702186645 -0.01664777121912278 0.017037262973597655" rpy="0 0 0"/>
+      <mass value="0.014233736590697066"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.167399 -0.142881 0.010107" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_19_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.167399 -0.142881 0.010107" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_19_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_24_1">
+    <inertial>
+      <origin xyz="0.0132523116054169 -0.016647771879146317 0.011119554128877464" rpy="0 0 0"/>
+      <mass value="0.014233736590697"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz="1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.163976 -0.142881 -0.019512" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_24_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.163976 -0.142881 -0.019512" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_24_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="rear_right_wheel">
+    <inertial>
+      <origin xyz="3.1733479732842795e-10 0.023761471768032644 -7.514689871510898e-14" rpy="0 0 0"/>
+      <mass value="0.30282113324994864"/>
+      <inertia ixx="0.00016" iyy="0.000183" izz="0.00016" ixy="0.0" iyz="0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.125 0.15  0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/rear_right_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.125 0.15  0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/rear_right_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_34_1">
+    <inertial>
+      <origin xyz="-0.01730009422242071 -0.016647771219125196 -1.0685896612017132e-15" rpy="0 0 0"/>
+      <mass value="0.014233736590696927"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz="0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.107684 0.109619 -0.04" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_34_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.107684 0.109619 -0.04" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_34_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_30_1">
+    <inertial>
+      <origin xyz="-0.013252311605417719 -0.016647771879147177 0.011119554128875175" rpy="0 0 0"/>
+      <mass value="0.014233736590697087"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz="1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.086024 0.109619 -0.019512" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_30_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.086024 0.109619 -0.019512" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_30_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_32_1">
+    <inertial>
+      <origin xyz="-0.0030039279893207677 -0.01664777187914715 0.017037263649050297" rpy="0 0 0"/>
+      <mass value="0.014233736590697054"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy=" 0.0" iyz="1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.082601 0.109619 0.010107" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_32_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.082601 0.109619 0.010107" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_32_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_31_1">
+    <inertial>
+      <origin xyz="0.008650063262586508 -0.01664777121912009 0.014982225192549992" rpy="0 0 0"/>
+      <mass value="0.01423373659069689"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.099017 0.109619 0.034996" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_31_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.099017 0.109619 0.034996" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_31_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_29_1">
+    <inertial>
+      <origin xyz="0.016256859835714538 -0.016647771879146372 0.0059168553068168275" rpy="0 0 0"/>
+      <mass value="0.014233736590697115"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz="0.0" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.127591 0.109619 0.04351" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_29_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.127591 0.109619 0.04351" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_29_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_28_1">
+    <inertial>
+      <origin xyz="-0.013252320380341881 -0.016647771879148177 -0.011119998679359859" rpy="0 0 0"/>
+      <mass value="0.014233736590697"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-1e-06" iyz="-1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.137447 0.109619 -0.041772" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_28_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.137447 0.109619 -0.041772" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_28_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_35_1">
+    <inertial>
+      <origin xyz="0.01625624772515405 -0.01664777121912206 -0.005917264735111838" rpy="0 0 0"/>
+      <mass value="0.01423373659069706"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="1e-06" iyz=" 0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.154952 0.109619 0.031665" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_35_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.154952 0.109619 0.031665" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_35_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_36_1">
+    <inertial>
+      <origin xyz="0.00865003096434197 -0.016647771218981755 -0.01498222519244071" rpy="0 0 0"/>
+      <mass value="0.014233736590696964"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="-1e-06" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.168299 0.109619 0.005004" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_36_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.168299 0.109619 0.005004" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_36_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roller_33_1">
+    <inertial>
+      <origin xyz="-0.003004114238040423 -0.01664746213595243 -0.017036975834204805" rpy="0 0 0"/>
+      <mass value="0.01423373659069702"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy=" 0.0" iyz="-1e-06" ixz=" 0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.161391 0.109586 -0.023967" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_33_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.161391 0.109586 -0.023967" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+            filename="file://$(find mec)/meshes/mecanumwheels/roller_33_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+
+
+</robot>

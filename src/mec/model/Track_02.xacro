@@ -1,0 +1,629 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Track_02">
+
+  <!-- Make the whole track static -->
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+
+  <link
+    name="Track_link">
+    <inertial>
+      <origin
+        xyz="4.9984 0.4 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="2790" />
+      <inertia
+        ixx="153.73"
+        ixy="-4.7216E-12"
+        ixz="-2.7936E-12"
+        iyy="23250"
+        iyz="-9.718E-13"
+        izz="23404" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Track_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Track_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Track_lane">
+    <inertial>
+      <origin
+        xyz="4.9 0.4 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="90" />
+      <inertia
+        ixx="0.023438"
+        ixy="-1.6263E-16"
+        ixz="-4.8075E-17"
+        iyy="0.079688"
+        iyz="1.4849E-18"
+        izz="0.09375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Track_lane.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Track_lane.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Track_lane_joint"
+    type="fixed">
+    <origin
+      xyz="0.15 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Track_link" />
+    <child
+      link="Track_lane" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Back_Track">
+    <inertial>
+      <origin
+        xyz="3.5527E-15 0.4 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="558" />
+      <inertia
+        ixx="30.745"
+        ixy="2.4158E-13"
+        ixz="-3.4732E-14"
+        iyy="186.03"
+        iyz="-1.7176E-14"
+        izz="216.71" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Back_Track.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Back_Track.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Track_joint"
+    type="fixed">
+    <origin
+      xyz="-1.0016 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Track_link" />
+    <child
+      link="Back_Track" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Back_lane">
+    <inertial>
+      <origin
+        xyz="0.5 0.4 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="18" />
+      <inertia
+        ixx="0.0046875"
+        ixy="-5.6379E-17"
+        ixz="-1.3696E-17"
+        iyy="0.015938"
+        iyz="6.3315E-18"
+        izz="0.01875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Back_lane.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Back_lane.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_lane_joint"
+    type="fixed">
+    <origin
+      xyz="-0.44839 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Back_Track" />
+    <child
+      link="Back_lane" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="BST">
+    <inertial>
+      <origin
+        xyz="0 1.05 -0.0625"
+        rpy="0 0 0" />
+      <mass
+        value="1800" />
+      <inertia
+        ixx="39.844"
+        ixy="-1.5898E-13"
+        ixz="-4.8406E-14"
+        iyy="602.34"
+        iyz="1.1171E-14"
+        izz="637.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/BST.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/BST.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BST_joint"
+    type="fixed">
+    <origin
+      xyz="0.0016129 -0.65 0.1"
+      rpy="0 0 0" />
+    <parent
+      link="Back_Track" />
+    <child
+      link="BST" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Front_Track">
+    <inertial>
+      <origin
+        xyz="1.7764E-15 0.4 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="558" />
+      <inertia
+        ixx="30.745"
+        ixy="4.7073E-14"
+        ixz="-1.132E-14"
+        iyy="186.03"
+        iyz="-2.7953E-14"
+        izz="216.71" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Front_Track.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Front_Track.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Track_joint"
+    type="fixed">
+    <origin
+      xyz="10.998 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Track_link" />
+    <child
+      link="Front_Track" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Front_lane">
+    <inertial>
+      <origin
+        xyz="-0.9 0.4 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="18" />
+      <inertia
+        ixx="0.0046875"
+        ixy="-1.2251E-17"
+        ixz="-1.0044E-17"
+        iyy="0.015938"
+        iyz="4.696E-19"
+        izz="0.01875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Front_lane.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/Front_lane.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_lane_joint"
+    type="fixed">
+    <origin
+      xyz="0.95161 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Front_Track" />
+    <child
+      link="Front_lane" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FST">
+    <inertial>
+      <origin
+        xyz="0 1.05 -0.0625"
+        rpy="0 0 0" />
+      <mass
+        value="1800" />
+      <inertia
+        ixx="39.844"
+        ixy="-1.8741E-13"
+        ixz="2.3248E-13"
+        iyy="602.34"
+        iyz="-6.7474E-15"
+        izz="637.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/FST.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/FST.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FST_joint"
+    type="fixed">
+    <origin
+      xyz="0.0016129 -0.65 0.1"
+      rpy="0 0 0" />
+    <parent
+      link="Front_Track" />
+    <child
+      link="FST" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="obstacle_1">
+    <inertial>
+      <origin
+        xyz="1.7764E-15 8.8818E-16 -0.1"
+        rpy="0 0 0" />
+      <mass
+        value="24" />
+      <inertia
+        ixx="0.8"
+        ixy="1.0408E-16"
+        ixz="-3.1804E-17"
+        iyy="0.16"
+        iyz="-1.7412E-17"
+        izz="0.8" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/obstacle_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/obstacle_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="obstacle_1_joint"
+    type="fixed">
+    <origin
+      xyz="4.1 0 0.2"
+      rpy="0 0 0" />
+    <parent
+      link="Track_link" />
+    <child
+      link="obstacle_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="obstacle_2">
+    <inertial>
+      <origin
+        xyz="0 8.8818E-16 -0.1"
+        rpy="0 0 0" />
+      <mass
+        value="24" />
+      <inertia
+        ixx="0.8"
+        ixy="1.2837E-16"
+        ixz="-5.2221E-17"
+        iyy="0.16"
+        iyz="4.2557E-17"
+        izz="0.8" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/obstacle_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/obstacle_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="obstacle_2_joint"
+    type="fixed">
+    <origin
+      xyz="8.1 0.8 0.2"
+      rpy="0 0 0" />
+    <parent
+      link="Track_link" />
+    <child
+      link="obstacle_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sidewalk">
+    <inertial>
+      <origin
+        xyz="-1.7764E-15 1.05 -0.0625"
+        rpy="0 0 0" />
+      <mass
+        value="9000" />
+      <inertia
+        ixx="199.22"
+        ixy="-5.457E-12"
+        ixz="-3.9638E-12"
+        iyy="75012"
+        iyz="1.6695E-12"
+        izz="75188" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/sidewalk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.0125"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find mec)/meshes/Track_02/sidewalk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sidewalk_joint"
+    type="fixed">
+    <origin
+      xyz="5 -0.65 0.1"
+      rpy="0 0 0" />
+    <parent
+      link="Track_link" />
+    <child
+      link="sidewalk" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="Track_link">
+    <material>Gazebo/Black</material>
+    <mu1>100.0</mu1><mu2>50.0</mu2>
+  </gazebo>
+
+  <gazebo reference="Track_lane">
+    <material>Gazebo/White</material>
+    <mu1>100.0</mu1><mu2>50.0</mu2>
+  </gazebo>
+
+  <gazebo reference="Back_Track">
+    <material>Gazebo/Black</material>
+    <mu1>100.0</mu1><mu2>50.0</mu2>
+  </gazebo>
+
+  <gazebo reference="Back_lane">
+    <material>Gazebo/White</material>
+    <mu1>100.0</mu1><mu2>50.0</mu2>
+  </gazebo>
+
+  <gazebo reference="Front_Track">
+    <material>Gazebo/Black</material>
+    <mu1>100.0</mu1><mu2>50.0</mu2>
+  </gazebo>
+
+  <gazebo reference="Front_lane">
+    <material>Gazebo/White</material>
+    <mu1>100.0</mu1><mu2>50.0</mu2>
+  </gazebo>
+
+  <gazebo reference="obstacle_1">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <gazebo reference="obstacle_2">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <gazebo reference="sidewalk">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="BST">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="FST">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+</robot>
